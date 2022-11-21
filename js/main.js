@@ -25,12 +25,12 @@
           $('#messages').append($('<p>').text(data));
         });
         
-        $('#sendBtn').on('click', function () {
-          var obj = {id: 1, message: $('#messageTxtBox').val()};
+        $('#chat-submit').on('click', function () {
+          var obj = {id: 1, message: $('#chat-input').val()};
           var json = JSON.stringify(obj);
           s.send(json);
-          $('#messages').append($('<p>').text($('#messageTxtBox').val()));
-          document.getElementById('messageTxtBox').value = "";
+          $('#messages').append($('<p>').text($('#chat-input').val()));
+          document.getElementById('chat-input').value = "";
         });
         
         // End of Chatbot Integration
