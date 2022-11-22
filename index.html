@@ -151,7 +151,7 @@
 			 <div class="mb-4">
 			<div id="messages" style="margin: 0 auto; width: 60%; text-align: center; min-height: 300px;">
 			  </div>  
-			  <h1>CAiFE Pow 2</h1>
+			  <h1>CAiFE Pow 3</h1>
 			  <input type="text" id="messageTxtBox" placeholder="Message">
 			  <button id="sendBtn">Send</button>
 			 </div>
@@ -666,12 +666,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
 	
  <script type="text/javascript">
-      $(document).ready(function() {
+//       $(document).ready(function() {
 
         var s = io.connect("http://3.88.137.167:5000");
 
         s.on('response_chat', function(data) {
-          $('#messages').append($('<p>').text(data));
+//           $('#messages').append($('<p>').text(data));
+		$('#messages').append.text(data));
         });
         
         $('#sendBtn').on('click', function () {
@@ -682,7 +683,7 @@
           document.getElementById('messageTxtBox').value = "";
         });
 
-      })
+//       })
     </script>
     
     <!-- Template Javascript -->
