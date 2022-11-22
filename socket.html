@@ -26,21 +26,20 @@
 
 //       })
       
-      function check()
-      {
-        if(window.jQuery)
-        {
-          alert("jquery is loaded.");
-        else
-        {
-          alert("jquery is not loaded.");
-        }
-      }
+     window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+}
    </script>
     
     </head>
     
-   <body onload="check()" style="text-align:center; font-family: Arial; font-size: 14pt;">
+   <body style="text-align:center; font-family: Arial; font-size: 14pt;">
   <div id="messages" style="margin: 0 auto; width: 60%; text-align: center; min-height: 300px;">
   </div>  
   <h1>CAiFE</h1>
