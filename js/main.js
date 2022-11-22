@@ -19,17 +19,17 @@
         
         // Chatbot Integration with backend
         
-          var s = io.connect("http://3.88.137.167:5000");
+          var s = io.connect("http://18.208.133.164:5000");
 
         s.on('response_chat', function(data) {
-          $('#messages').append($('<p>').text(data));
+          $('.chat-logs').append($('<p>').text(data));
         });
         
         $('#chat-submit').on('click', function () {
           var obj = {id: 1, message: $('#chat-input').val()};
           var json = JSON.stringify(obj);
           s.send(json);
-          $('#messages').append($('<p>').text($('#chat-input').val()));
+          $('.chat-logs').append($('<p>').text($('#chat-input').val()));
           document.getElementById('chat-input').value = "";
         });
         
