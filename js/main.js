@@ -18,20 +18,32 @@
         $(window).resize(toggleNavbarMethod);
         
         // Chatbot Integration with backend
-        
-          var s = io.connect("http://18.208.133.164:5000");
+         var s = io.connect("http://18.208.133.164:5000");
 
         s.on('response_chat', function(data) {
-          $('.chat-logs').append($('<p>').text(data));
+          $('#messages').append($('<p>').text(data));
         });
         
-        $('#chat-submit').on('click', function () {
-          var obj = {id: 1, message: $('#chat-input').val()};
+        $('#sendBtn').on('click', function () {
+          var obj = {id: 1, message: $('#messageTxtBox').val()};
           var json = JSON.stringify(obj);
           s.send(json);
-          $('.chat-logs').append($('<p>').text($('#chat-input').val()));
-          document.getElementById('chat-input').value = "";
+          $('#messages').append($('<p>').text($('#messageTxtBox').val()));
+          document.getElementById('messageTxtBox').value = "";
         });
+//           var s = io.connect("http://18.208.133.164:5000");
+
+//         s.on('response_chat', function(data) {
+//           $('.chat-logs').append($('<p>').text(data));
+//         });
+        
+//         $('#chat-submit').on('click', function () {
+//           var obj = {id: 1, message: $('#chat-input').val()};
+//           var json = JSON.stringify(obj);
+//           s.send(json);
+//           $('.chat-logs').append($('<p>').text($('#chat-input').val()));
+//           document.getElementById('chat-input').value = "";
+//         });
         
         // End of Chatbot Integration
         
