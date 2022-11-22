@@ -8,31 +8,31 @@
    
  
     <script type="text/javascript">
-//       $(document).ready(function() {
+      $(document).ready(function() {
 
-//         var s = io.connect("http://18.208.133.164:5000");
+        var s = io.connect("http://18.208.133.164:5000");
 
-//         s.on('response_chat', function(data) {
-//           $('#messages').append($('<p>').text(data));
-//         });
+        s.on('response_chat', function(data) {
+          $('#messages').append($('<p>').text(data));
+        });
         
-//         $('#sendBtn').on('click', function () {
-//           var obj = {id: 1, message: $('#messageTxtBox').val()};
-//           var json = JSON.stringify(obj);
-//           s.send(json);
-//           $('#messages').append($('<p>').text($('#messageTxtBox').val()));
-//           document.getElementById('messageTxtBox').value = "";
-//         });
+        $('#sendBtn').on('click', function () {
+          var obj = {id: 1, message: $('#messageTxtBox').val()};
+          var json = JSON.stringify(obj);
+          s.send(json);
+          $('#messages').append($('<p>').text($('#messageTxtBox').val()));
+          document.getElementById('messageTxtBox').value = "";
+        });
 
-//       })
+      })
       
      window.onload = function() {
     if (window.jQuery) {  
         // jQuery is loaded  
-        alert("Yeah!");
+        alert("Yeah! jQuery is loaded!");
     } else {
         // jQuery is not loaded
-        alert("Doesn't Work");
+        alert("Doesn't Work. jQuery is not loaded!");
     }
 }
    </script>
