@@ -160,9 +160,9 @@
     INDEX++;
     var str="";
     str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
-    str += "          <span class=\"msg-avatar\">";
-    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-    str += "          <\/span>";
+//     str += "          <span class=\"msg-avatar\">";
+//     str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+//     str += "          <\/span>";
     str += "          <div class=\"cm-msg-text\">";
     str += msg;
     str += "          <\/div>";
@@ -194,9 +194,9 @@
     }).join('');
     var str="";
     str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
-    str += "          <span class=\"msg-avatar\">";
-    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-    str += "          <\/span>";
+//     str += "          <span class=\"msg-avatar\">";
+//     str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+//     str += "          <\/span>";
     str += "          <div class=\"cm-msg-text\">";
     str += msg;
     str += "          <\/div>";
